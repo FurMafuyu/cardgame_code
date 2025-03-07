@@ -13,7 +13,7 @@ class Card:
         self.cost = cost
 
     def __getattr__(self, name):
-        if name == "type":
+        if name == "type": #wat
             return self.type
         raise AttributeError(name)
     
