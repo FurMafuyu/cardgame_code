@@ -1,3 +1,6 @@
+"""
+Main file
+"""
 from cards import cards  
 
 def main():
