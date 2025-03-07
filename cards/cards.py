@@ -1,3 +1,7 @@
+"""
+Card classes creation file
+"""
+
 from colorama import *
 init(autoreset=True)
 
@@ -36,7 +40,7 @@ class Minion(Card):
         self.atk = atk
     
     def __str__(self):
-        return self.name + ", " + str(self.cost) + " Mana, " + str(self.atk) + " | " + self.printHP()
+        return self.name + ", " + str(self.cost) + " Mana, " + self.printATK() + " | " + self.printHP()
     
     def takeDamage(self, amount):
         if amount >= self.hp:
@@ -52,3 +56,11 @@ class Minion(Card):
             return (Fore.GREEN + str(self.hp) + Fore.WHITE)
         else:
             return (str(self.hp))
+
+    def printATK(self):
+        if self.atk < self.rawAtk :
+            return (Fore.RED + str(self.atk) + Fore.WHITE)
+        elif self.hp > self.rawHp :
+            return (Fore.GREEN + str(self.atk) + Fore.WHITE)
+        else:
+            return (str(self.atk))
