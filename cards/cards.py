@@ -4,7 +4,16 @@ Card classes creation file
 
 from colorama import *
 init(autoreset=True)
+from enum import Enum
 
+class Rarity(Enum):
+    COMMON = 1
+    RARE = 2
+    EPIC = 3
+    LEGENDARY = 4
+    FABULOUS = 5
+    HIDDEN = 6
+    
 def kill(card):
     return 0
 
@@ -14,7 +23,7 @@ def annihilate(card):
 
     
 class Card:
-
+    rarity = Rarity
     types = []
     name = "name_init"
     cost = 0
