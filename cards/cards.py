@@ -20,21 +20,37 @@ def kill(card):
 def annihilate(card):
     return 0
 
+def applyRarity(rar):
+    match rar:
+            case Rarity.COMMON:
+                ret = Fore.WHITE
+            case Rarity.RARE:
+                ret = Fore.BLUE
+            case Rarity.EPIC:
+                ret = Fore.MAGENTA
+            case Rarity.LEGENDARY: 
+                ret = Fore.YELLOW
+            case Rarity.FABULOUS: 
+                ret = Fore.CYAN
+            case Rarity.HIDDEN:
+                ret = Fore.RED
+    return ret
 
     
 class Card:
-    rarity = Rarity
+    rarity = Rarity.COMMON
     types = []
     name = "name_init"
     cost = 0
 
-    def __init__(self, types, name, cost):
+    def __init__(self, rarity, types, name, cost):
+        self.rarity = rarity
         self.types = types.split()
         self.name = name
         self.cost = cost
     
     def __str__(self):
-        return f"[Card] - {self.types}, {self.name}, {self.cost} Mana."
+        return applyRarity(self.rarity) + f"[Card]{Fore.WHITE} - {self.types}, {self.name}, {self.cost} Mana."
     
 
 
@@ -46,8 +62,8 @@ class Minion(Card):
     maxHp = 0
     hp = 0
 
-    def __init__(self, types, name, cost, atk, hp):
-        super().__init__(types, name, cost)
+    def __init__(self, rarity, types, name, cost, atk, hp):
+        super().__init__(rarity, types, name, cost)
         self.rawAtk = atk
         self.rawHp = hp
         self.hp = hp
@@ -55,7 +71,7 @@ class Minion(Card):
         self.atk = atk
     
     def __str__(self):
-        return f"[Minion] - {self.types}, {self.name}, {self.cost} Mana, {self.printATK()} | {self.printHP()}"
+        return applyRarity(self.rarity) +  f"[Minion]{Fore.WHITE} - {self.types}, {self.name}, {self.cost} Mana, {self.printATK()} | {self.printHP()}"
     
     def takeDamage(self, amount):
         self.hp = self.hp - amount
