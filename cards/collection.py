@@ -4,16 +4,49 @@ This file is meant to create and stock every card created
 from .cards import Minion, Rarity
 
 cardCollection = {
-    0: Minion(Rarity.HIDDEN, "Dev", "Training Dummy", 1, 2, 2)
+    0: Minion(Rarity.HIDDEN, "Dev", "Training Dummy", 1, 0, 2)
 }
 
 def init():
     # Minion(str types, str name, int cost, int ATK, int HP)
     minions = [
+        # VALUES
+        ## Unobtainable
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Erebus", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "TMTC Chat", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "OurseBrutale", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Perroquet", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Chieng", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "", "Femme Peacock", 9, 9, 9), #PTT la femme 14 ?
+
+        # LEGENDARIES
         Minion(Rarity.LEGENDARY, "Animaler Cat", "Mordecai de Grammont", 4, 4, 5),
         Minion(Rarity.LEGENDARY, "Animaler", "Matthieu de Grammont", 7, 5, 5),
-        Minion(Rarity.FABULOUS, "", "Furmafuyu", 9, 9, 9),
-        Minion(Rarity.EPIC, "Human", "TKHTank", 5, 5, 4)
+        Minion(Rarity.LEGENDARY, "Animaler Cat", "Fantoccio de Grammont", 7, 5, 5),
+        Minion(Rarity.LEGENDARY, "Animaler Cat", "Miausric de Grammont", 7, 5, 5),
+        Minion(Rarity.LEGENDARY, "Human", "Sa Majesté Louis", 7, 5, 5),
+        Minion(Rarity.LEGENDARY, "Animaler Dog", "Belfort de Tours", 7, 5, 5),
+        Minion(Rarity.LEGENDARY, "Animaler", "Matthieu de Grammont", 7, 5, 5),
+
+        # EPICS
+        Minion(Rarity.EPIC, "Human", "Tom Averti", 5, 5, 4),
+
+        # RARES
+        Minion(Rarity.RARE, "Human", "Préposé au crottin", 4, 3, 3),
+
+        # COMMONS
+        Minion(Rarity.COMMON, "Human", "Jardinier recycleur", 2, 2, 1)
+
+        # DEVS
+        ## Unobtainable
     ]
 
     startId = 10
