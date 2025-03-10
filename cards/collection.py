@@ -12,11 +12,11 @@ def init():
     minions = [
         # VALUES
         ## Unobtainable
-        Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
-        Minion(Rarity.FABULOUS, "", "Erebus", 9, 9, 9),
-        Minion(Rarity.FABULOUS, "", "TMTC Chat", 9, 9, 9),
-        Minion(Rarity.FABULOUS, "", "OurseBrutale", 9, 9, 9),
-        Minion(Rarity.FABULOUS, "", "Perroquet", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "Bauteique", "Furmafu", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "Prudistere", "Erebus", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "Acephane", "TMTC Chat", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "Forceroce", "OurseBrutale", 9, 9, 9),
+        Minion(Rarity.FABULOUS, "Orgueique", "Perroquet", 9, 9, 9),
         Minion(Rarity.FABULOUS, "", "Chieng", 9, 9, 9),
         Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
         Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
@@ -25,7 +25,7 @@ def init():
         Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
         Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
         Minion(Rarity.FABULOUS, "", "Furmafu", 9, 9, 9),
-        Minion(Rarity.FABULOUS, "", "Femme Peacock", 9, 9, 9), #PTT la femme 14 ?
+        Minion(Rarity.FABULOUS, "Bauteique", "Femme Peacock", 9, 9, 9), #PTT LA femme 14 ?
 
         # LEGENDARIES
         Minion(Rarity.LEGENDARY, "Animaler Cat", "Mordecai de Grammont", 4, 4, 5),
